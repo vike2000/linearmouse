@@ -46,6 +46,8 @@ extension Scheme.Buttons.Mapping.Action {
 
         case mouseWheelScrollUp = "mouse.wheel.scrollUp"
         case mouseWheelScrollDown = "mouse.wheel.scrollDown"
+        case mouseWheelScrollDirectionFlipWhileDown = "var.scrollDirection.whileDown"
+        case mouseWheelScrollDirectionFlipToggle = "var.scrollDirection.toggle"
         case mouseWheelScrollLeft = "mouse.wheel.scrollLeft"
         case mouseWheelScrollRight = "mouse.wheel.scrollRight"
 

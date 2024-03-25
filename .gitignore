@@ -35,3 +35,6 @@ DerivedData/
 
 # Node.js
 node_modules
+
+# vike2000@gmail.com (it's an em-dash)
+*—[0-9]*

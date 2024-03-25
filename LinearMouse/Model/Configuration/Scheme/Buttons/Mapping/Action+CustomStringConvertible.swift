@@ -81,6 +81,10 @@ extension Scheme.Buttons.Mapping.Action.Arg0: CustomStringConvertible {
             return NSLocalizedString("Back", comment: "")
         case .mouseButtonForward:
             return NSLocalizedString("Forward", comment: "")
+        case .mouseWheelScrollDirectionFlipWhileDown:
+            return NSLocalizedString("Flip scroll direction while down", comment: "")
+        case .mouseWheelScrollDirectionFlipToggle:
+            return NSLocalizedString("Flip scroll direction", comment: "")
         }
     }
 }

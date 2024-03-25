@@ -11,6 +11,8 @@ class EventTransformerManager {
     static let shared = EventTransformerManager()
     static let log = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "EventTransformerManager")
 
+    static var scrollDirectionFlipState = false
+
     @Default(.bypassEventsFromOtherApplications) var bypassEventsFromOtherApplications
 
     private var eventTransformerCache = LRUCache<CacheKey, EventTransformer>(countLimit: 16)
@@ -123,6 +125,8 @@ class EventTransformerManager {
                 .append(ScrollingAccelerationSpeedAdjustmentTransformer(acceleration: scheme.scrolling.acceleration,
                                                                         speed: scheme.scrolling.speed))
         }
+
+        eventTransformer.append(ScrollDirectionFlipTransformer())
 
         if let timeout = scheme.buttons.clickDebouncing.timeout, timeout > 0,
            let buttons = scheme.buttons.clickDebouncing.buttons {

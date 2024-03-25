@@ -83,6 +83,26 @@ extension ButtonActionsTransformer: EventTransformer {
             return event
         }
 
+        if case .arg0(.auto) = action {
+            return event
+        }
+
+        if case .arg0(.mouseWheelScrollDirectionFlipWhileDown) = action {
+            EventTransformerManager.scrollDirectionFlipState = mouseDownEventTypes.contains(event.type)
+            os_log("flip=%{public}@", log: Self.log, type: .info,
+                   String(describing: EventTransformerManager.scrollDirectionFlipState))
+            return nil
+        }
+
+        if case .arg0(.mouseWheelScrollDirectionFlipToggle) = action {
+            if mouseDownEventTypes.contains(event.type) {
+                EventTransformerManager.scrollDirectionFlipState = !EventTransformerManager.scrollDirectionFlipState
+                os_log("flip=%{public}@", log: Self.log, type: .info,
+                       String(describing: EventTransformerManager.scrollDirectionFlipState))
+            }
+            return nil
+        }
+
         if event.type == .scrollWheel {
             queueActions(event: event.copy(), action: action)
         } else {
@@ -239,6 +259,11 @@ extension ButtonActionsTransformer: EventTransformer {
 
         case .arg0(.keyboardBrightnessDown):
             postSystemDefinedKey(.illuminationDown)
+
+        case .arg0(.mouseWheelScrollDirectionFlipWhileDown):
+            return
+        case .arg0(.mouseWheelScrollDirectionFlipToggle):
+            return
 
         case .arg0(.mouseWheelScrollUp):
             postScrollEvent(horizontal: 0, vertical: 3)

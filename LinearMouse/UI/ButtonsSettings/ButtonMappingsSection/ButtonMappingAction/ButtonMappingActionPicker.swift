@@ -92,6 +92,10 @@ extension ButtonMappingActionPicker {
             .actionType(.arg0(.mouseWheelScrollRight)),
             .actionType(.mouseWheelScrollRight)
         ] },
+        .section("Mouse Wheel Flip") { [
+            .actionType(.arg0(.mouseWheelScrollDirectionFlipWhileDown)),
+            .actionType(.arg0(.mouseWheelScrollDirectionFlipToggle))
+        ] },
         .section("Mouse Button") { [
             .actionType(.arg0(.mouseButtonLeft)),
             .actionType(.arg0(.mouseButtonLeftDouble)),

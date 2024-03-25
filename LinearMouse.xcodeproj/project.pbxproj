@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		36EBC3223E2CEE09F84076D8 /* Process.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EBC80F80AD57E8226267BF /* Process.m */; };
+		3EDA1BE52BAF0E5C00270885 /* ScrollDirectionFlipTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDA1BE42BAF0E5C00270885 /* ScrollDirectionFlipTransformer.swift */; };
 		9704BA992976E84C00C8B06D /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704BA982976E84C00C8B06D /* SettingsState.swift */; };
 		970AA57F2B346B2D0050B5A2 /* GlobalEventTapWatchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970AA57E2B346B2D0050B5A2 /* GlobalEventTapWatchdog.swift */; };
 		970AA5812B346F670050B5A2 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970AA5802B346F670050B5A2 /* Application.swift */; };
@@ -163,6 +164,7 @@
 /* Begin PBXFileReference section */
 		36EBC1359D50EDBC252FB81F /* Process.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Process.h; sourceTree = "<group>"; };
 		36EBC80F80AD57E8226267BF /* Process.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Process.m; sourceTree = "<group>"; };
+		3EDA1BE42BAF0E5C00270885 /* ScrollDirectionFlipTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollDirectionFlipTransformer.swift; sourceTree = "<group>"; };
 		9704BA982976E84C00C8B06D /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
 		970AA57E2B346B2D0050B5A2 /* GlobalEventTapWatchdog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEventTapWatchdog.swift; sourceTree = "<group>"; };
 		970AA5802B346F670050B5A2 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
@@ -445,8 +447,6 @@
 		9724A9CE2ACAF18000EA5DE3 /* EventTap */ = {
 			isa = PBXGroup;
 			children = (
-				975979CF2A6B7A3800016EDF /* EventTap.swift */,
-				B7BD51802672FEB5001FE742 /* GlobalEventTap.swift */,
 			);
 			path = EventTap;
 			sourceTree = "<group>";
@@ -873,6 +873,7 @@
 				97A2F60929508AD800F31122 /* EventTransformerManager.swift */,
 				B7ADF97E2748991D0005B02D /* ReverseScrollingTransformer.swift */,
 				97353385297ED84600C1B5D0 /* ScrollingAccelerationSpeedAdjustmentTransformer.swift */,
+				3EDA1BE42BAF0E5C00270885 /* ScrollDirectionFlipTransformer.swift */,
 				B7ADF9822748B12B0005B02D /* LinearScrollingVerticalTransformer.swift */,
 				97E16F4E28F9A22A00E7D09B /* LinearScrollingHorizontalTransformer.swift */,
 				B7ADF9842748B25A0005B02D /* ModifierActionsTransformer.swift */,
@@ -1211,6 +1212,7 @@
 				97C5DBBA28682809006FA6B4 /* Extensions.swift in Sources */,
 				B7ADF98F2748E6400005B02D /* MouseEventView.swift in Sources */,
 				97A46B17285444BF00C07C9B /* NSWindow.swift in Sources */,
+				3EDA1BE52BAF0E5C00270885 /* ScrollDirectionFlipTransformer.swift in Sources */,
 				97EF39952AA8CE6E00E30B32 /* EventView.swift in Sources */,
 				978DBCA029A61D50002259B3 /* ClickDebouncingTransformer.swift in Sources */,
 				972AFD452851C101009B0CBF /* AccessibilityPermissionView.swift in Sources */,
